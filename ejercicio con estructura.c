@@ -10,6 +10,8 @@ struct Alumno {
 
 
 int main() {
+
+    // se ingresa la cantidad de alumnos 
     struct Alumno alumnos[3];
 
     for (int i = 0; i < 3; i++) {
@@ -41,10 +43,10 @@ int main() {
     printf("Datos de los alumnos:\n");
     for (int i = 0; i < 3; i++) {
         printf("Alumno %d:\n", i+1); 
-        printf("Nombre: %s\n", alumnos[i].nombre); 
-        printf("Direccion: %s\n", alumnos[i].direccion);
-        printf("Carrera: %s\n", alumnos[i].carrera);
-        printf("Promedio: %.2f\n\n", alumnos[i].promedio);
+        printf("Nombre: %s\n", alumnos[i].nombre); // imprime el nombre del alumno
+        printf("Direccion: %s\n", alumnos[i].direccion); // imprime la direccion del alumno
+        printf("Carrera: %s\n", alumnos[i].carrera); // imprime la carrera del alumno
+        printf("Promedio: %.2f\n\n", alumnos[i].promedio); // imprime el promedio del alumno
     }
 
     return 0;
