@@ -21,7 +21,7 @@ int main() {
 printf("%d %p\n",varI, ptrI);
 printf("%d %p\n",varC, ptrC);
 printf("%c %p\n",varF, ptrF);
-
+// hola
 
 return 0;
 }
