@@ -19,3 +19,19 @@ d) Calcule la Carrera que recibió la mayor cantidad de alumnos en el último a�
 e) Calcule en qué año la carrera de Ingeniería de Software recibió la mayor cantidad de alumnos.
  */
 
+#include <stdio.h>
+
+#define NUM_CARRERAS 7
+#define NUM_ANIOS 5
+
+void imprimirAnioMaxAlumnos(int anioMaxAlumnos) {
+    printf("El anio con la mayor cantidad de alumnos fue el anio %d\n", anioMaxAlumnos);
+}
+
+void imprimirCarreraMaxAlumnosUltimoAnio(int carreraMaxAlumnosUltimoAnio) {
+    printf("La carrera con la mayor cantidad de alumnos en el ultimo anio fue la carrera %d\n", carreraMaxAlumnosUltimoAnio);
+}
+
+void imprimirAnioMaxAlumnosIngenieriaSoftware(int anioMaxAlumnosIngenieriaSoftware) {
+    printf("La carrera de Ingenieria de Software recibio la mayor cantidad de alumnos en el anio %d\n", anioMaxAlumnosIngenieriaSoftware);
+}
