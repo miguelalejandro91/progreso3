@@ -20,29 +20,25 @@ e) Calcule en qué año la carrera de Ingeniería de Software recibió la mayor 
  */
 
 #include <stdio.h>
-
 #define NUM_CARRERAS 7
 #define NUM_ANIOS 5
-
 void imprimirAnioMaxAlumnos(int anioMaxAlumnos) {
-    printf("El anio con la mayor cantidad de alumnos fue el anio %d\n", anioMaxAlumnos);
+printf("El anio con la mayor cantidad de alumnos fue el anio %d\n", anioMaxAlumnos);
 }
-
 void imprimirCarreraMaxAlumnosUltimoAnio(int carreraMaxAlumnosUltimoAnio) {
-    printf("La carrera con la mayor cantidad de alumnos en el ultimo anio fue la carrera %d\n", carreraMaxAlumnosUltimoAnio);
+printf("La carrera con la mayor cantidad de alumnos en el ultimo anio fue la carrera %d\n", carreraMaxAlumnosUltimoAnio);
 }
-
 void imprimirAnioMaxAlumnosIngenieriaSoftware(int anioMaxAlumnosIngenieriaSoftware) {
-    printf("La carrera de Ingenieria de Software recibio la mayor cantidad de alumnos en el anio %d\n", anioMaxAlumnosIngenieriaSoftware);
+printf("La carrera de Ingenieria de Software recibio la mayor cantidad de alumnos en el anio %d\n", anioMaxAlumnosIngenieriaSoftware);
 }
 void guardarResultadoEnArchivo(const char* nombreArchivo, const char* resultado) {
     FILE* archivo = fopen(nombreArchivo, "a");  // Abrir el archivo en modo "append" para agregar al final del archivo
     if (archivo != NULL) {
-        fprintf(archivo, "%s\n", resultado);  // Escribir el resultado en el archivo
-        fclose(archivo);  // Cerrar el archivo
-        printf("Resultado guardado en el archivo %s\n", nombreArchivo);
+    fprintf(archivo, "%s\n", resultado);  // Escribir el resultado en el archivo
+    fclose(archivo);  // Cerrar el archivo
+    printf("Resultado guardado en el archivo %s\n", nombreArchivo);
     } else {
-        printf("Error al abrir el archivo %s\n", nombreArchivo);
+    printf("Error al abrir el archivo %s\n", nombreArchivo);
     }
 }
 void imprimirMenu() {
@@ -55,32 +51,28 @@ void imprimirMenu() {
 }
 int main() {
     int opcion;
-
     do {
-        imprimirMenu();
-        scanf("%d", &opcion);
-
-        switch (opcion) {
-            case 1:
-                imprimirAnioMaxAlumnos(5);  // Supongamos que el año con más alumnos es el 5
-                guardarResultadoEnArchivo("resultados.txt", "El anio con la mayor cantidad de alumnos fue el anio 5");
-                break;
-            case 2:
-                imprimirCarreraMaxAlumnosUltimoAnio(3);  // Supongamos que la carrera con más alumnos en el último año es la 3
-                guardarResultadoEnArchivo("resultados.txt", "La carrera con la mayor cantidad de alumnos en el ultimo anio fue la carrera 3");
-                break;
-            case 3:
-                imprimirAnioMaxAlumnosIngenieriaSoftware(2);  // Supongamos que el año en el que Ingeniería de Software recibió más alumnos es el 2
-                guardarResultadoEnArchivo("resultados.txt", "La carrera de Ingenieria de Software recibio la mayor cantidad de alumnos en el anio 2");
-                break;
-            case 4:
-                printf("Saliendo del programa...\n");
-                break;
-            default:
-                printf("Opcion invalida. Por favor, ingrese una opcion valida.\n");
+    imprimirMenu();
+    scanf("%d", &opcion);
+    switch (opcion) {
+    case 1:
+     imprimirAnioMaxAlumnos(5);  // Supongamos que el año con más alumnos es el 5
+    guardarResultadoEnArchivo("resultados.txt", "El anio con la mayor cantidad de alumnos fue el anio 5");
+    break;
+    case 2:
+     imprimirCarreraMaxAlumnosUltimoAnio(3);  // Supongamos que la carrera con más alumnos en el último año es la 3
+    guardarResultadoEnArchivo("resultados.txt", "La carrera con la mayor cantidad de alumnos en el ultimo anio fue la carrera 3");
+    break;
+    case 3:
+    imprimirAnioMaxAlumnosIngenieriaSoftware(2);  // Supongamos que el año en el que Ingeniería de Software recibió más alumnos es el 2
+    guardarResultadoEnArchivo("resultados.txt", "La carrera de Ingenieria de Software recibio la mayor cantidad de alumnos en el anio 2");
+    break;
+    case 4:
+    printf("Saliendo del programa...\n");
+    break;
+    default:
+    printf("Opcion invalida. Por favor, ingrese una opcion valida.\n");
         }
-
     } while (opcion != 4);
-
     return 0;
 }
