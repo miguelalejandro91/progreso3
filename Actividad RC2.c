@@ -35,3 +35,13 @@ void imprimirCarreraMaxAlumnosUltimoAnio(int carreraMaxAlumnosUltimoAnio) {
 void imprimirAnioMaxAlumnosIngenieriaSoftware(int anioMaxAlumnosIngenieriaSoftware) {
     printf("La carrera de Ingenieria de Software recibio la mayor cantidad de alumnos en el anio %d\n", anioMaxAlumnosIngenieriaSoftware);
 }
+void guardarResultadoEnArchivo(const char* nombreArchivo, const char* resultado) {
+    FILE* archivo = fopen(nombreArchivo, "a");  // Abrir el archivo en modo "append" para agregar al final del archivo
+    if (archivo != NULL) {
+        fprintf(archivo, "%s\n", resultado);  // Escribir el resultado en el archivo
+        fclose(archivo);  // Cerrar el archivo
+        printf("Resultado guardado en el archivo %s\n", nombreArchivo);
+    } else {
+        printf("Error al abrir el archivo %s\n", nombreArchivo);
+    }
+}
