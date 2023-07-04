@@ -45,3 +45,11 @@ void guardarResultadoEnArchivo(const char* nombreArchivo, const char* resultado)
         printf("Error al abrir el archivo %s\n", nombreArchivo);
     }
 }
+void imprimirMenu() {
+    printf("\nMENU DE OPCIONES\n");
+    printf("1. Mostrar anio con la mayor cantidad de alumnos\n");
+    printf("2. Mostrar carrera con la mayor cantidad de alumnos en el ultimo anio\n");
+    printf("3. Mostrar anio en el que Ingenieria de Software recibio la mayor cantidad de alumnos\n");
+    printf("4. Salir\n");
+    printf("Ingrese el numero de la opcion deseada: ");
+}
