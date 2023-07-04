@@ -8,9 +8,9 @@ struct Alumno {
 };
 
 
-
 int main() {
-
+       
+    
     // se ingresa la cantidad de alumnos 
     struct Alumno alumnos[3];
 
